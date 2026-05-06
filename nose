@@ -1,0 +1,8 @@
+# Capturar toda la pantalla y guardar en Imágenes (Super + PrintScreen)
+bind = SUPER, Print, exec, grim ~/Pictures/$(date +'%Y-%m-%d_%H-%M-%S').png
+
+# Seleccionar un área y copiar al portapapeles (Super + Shift + S)
+bind = SUPER SHIFT, S, exec, grim -g "$(slurp)" - | wl-copy
+
+# Seleccionar un área y guardar en archivo (PrintScreen solo)
+bind = , Print, exec, grim -g "$(slurp)" ~/Pictures/$(date +'%Y-%m-%d_%H-%M-%S').png
